@@ -5,27 +5,31 @@
 
 <form (submit)="onSubmit($event)" cdkDropList (cdkDropListDropped)="drop($event)">
   <div>
-    <label for="email">Email</label>
-    <input type="email" placeholder="email" [formField]="userForm.email" />
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="email" [formField]="userForm.email">
+    </mat-form-field>
 
     @if(userForm.email().touched() && userForm.email().invalid()){
-      @for(error of userForm.email().errors(); track error){
-        <p>{{error.message}}</p>
-      }
+    @for(error of userForm.email().errors(); track error){
+    <p>{{error.message}}</p>
+    }
     }
   </div>
 
-  @for(field of formFields; track field.id){
-    <div cdkDrag>
-      <label for="{{field.label}}">{{field.label}}</label>
-      <input [type]="field.label" [placeholder]="field.label" [formField]="getField(field.label)" />
+  <!-- @for(field of formFields; track field.id){
+  <div cdkDrag>
+    <mat-form-field appearance="outline">
+      <mat-label>{{field.label}}</mat-label>
+      <input matInput [placeholder]="field.label" [formField]="getField(field.label)">
+    </mat-form-field>
 
-      @if(getField(field.label)().touched() && getField(field.label)().invalid()){
-        @for(error of getField(field.label)().errors(); track error){
-          <p>{{error.message}}</p>
-        }
-      }
-    </div>
+    @if(getField(field.label)().touched() && getField(field.label)().invalid()){
+    @for(error of getField(field.label)().errors(); track error){
+    <p>{{error.message}}</p>
+    }
+    }
+  </div> -->
 
   <!-- <div cdkDrag>
     <label for="password">Password</label>
@@ -40,9 +44,32 @@
     <p>{{error.message}}</p>
     } }
   </div> -->
+  <!-- } -->
+
+  @for(address of userModel().address; track $index){
+  <mat-form-field appearance="outline">
+    <mat-label>Address</mat-label>
+    <input matInput type="text" placeholder="address" [formField]="userForm.address[$index]">
+  </mat-form-field>
+  
+  @if (userForm.address[$index]().touched() && userForm.address[$index]().invalid()) {
+    <p>
+      {{ userForm.address[$index]().errors()?.[0]?.message }}
+    </p>
   }
-  <button [disabled]="userForm.email().invalid()" type="submit">Submit</button>
+}
+
+  <button [disabled]="userForm().invalid()" type="button" (click)="addAddress()">Add Address</button>
+  <button [disabled]="userForm().invalid()" matButton type="submit">Submit</button>
 </form>
+
+<div id="address">
+  @for(address of userModel().address; track $index){
+  <div>{{address}}</div>
+  }
+</div>
+
+<h1 class="heading">Hello</h1>
 
 <!-- <app-child [username]="'shubham'" (onSendEmit)="onTakeData($event)"></app-child> -->
 
@@ -50,8 +77,5 @@
 <div (click)="decreaseCounterValue()">{{decreaseValue()}}</div>
 <div (click)="toggleCounterValue()">{{toggle()}}</div>
 
-<app-counter 
-  [increaseValue]="increaseValue()"
-  [decreaseValue]="decreaseValue()"
-  [toggle]="toggle()">
+<app-counter [increaseValue]="increaseValue()" [decreaseValue]="decreaseValue()" [toggle]="toggle()">
 </app-counter>
