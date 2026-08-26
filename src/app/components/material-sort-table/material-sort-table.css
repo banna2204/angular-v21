@@ -1,0 +1,7 @@
+::ng-deep .mat-sort-header-arrow {
+  display: none;
+}
+
+mat-icon{
+    font-size: 25px;
+}

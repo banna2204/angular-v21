@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { MaterialSortTable } from './components/material-sort-table/material-sort-table';
+import { Paginator } from './components/paginator/paginator';
 
 interface Fruit {
   name: string;
@@ -39,7 +41,7 @@ const addressSchema = schema<User>((path)=>{
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule],
+  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule,MaterialSortTable,Paginator],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 

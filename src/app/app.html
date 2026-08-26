@@ -2,7 +2,7 @@
 <div>{{fruit2().price}}</div>
 {{name()}}
 <div>Email:{{ userForm.email().value()}}</div> -->
-
+<!-- 
 <form (submit)="onSubmit($event)" cdkDropList (cdkDropListDropped)="drop($event)">
   <div>
     <mat-form-field appearance="outline">
@@ -15,7 +15,7 @@
     <p>{{error.message}}</p>
     }
     }
-  </div>
+  </div> -->
 
   <!-- @for(field of formFields; track field.id){
   <div cdkDrag>
@@ -46,7 +46,7 @@
   </div> -->
   <!-- } -->
 
-  @for(address of userModel().address; track $index){
+  <!-- @for(address of userModel().address; track $index){
   <mat-form-field appearance="outline">
     <mat-label>Address</mat-label>
     <input matInput type="text" placeholder="address" [formField]="userForm.address[$index]">
@@ -57,9 +57,9 @@
       {{ userForm.address[$index]().errors()?.[0]?.message }}
     </p>
   }
-}
+} -->
 
-  <button [disabled]="userForm().invalid()" type="button" (click)="addAddress()">Add Address</button>
+  <!-- <button [disabled]="userForm().invalid()" type="button" (click)="addAddress()">Add Address</button>
   <button [disabled]="userForm().invalid()" matButton type="submit">Submit</button>
 </form>
 
@@ -69,13 +69,16 @@
   }
 </div>
 
-<h1 class="heading">Hello</h1>
+<h1 class="heading">Hello</h1> -->
 
 <!-- <app-child [username]="'shubham'" (onSendEmit)="onTakeData($event)"></app-child> -->
 
-<div (click)="increaseCounterValue()">{{increaseValue()}}</div>
+<!-- <div (click)="increaseCounterValue()">{{increaseValue()}}</div>
 <div (click)="decreaseCounterValue()">{{decreaseValue()}}</div>
 <div (click)="toggleCounterValue()">{{toggle()}}</div>
 
 <app-counter [increaseValue]="increaseValue()" [decreaseValue]="decreaseValue()" [toggle]="toggle()">
-</app-counter>
+</app-counter> -->
+
+<app-material-sort-table></app-material-sort-table>
+<app-paginator></app-paginator>

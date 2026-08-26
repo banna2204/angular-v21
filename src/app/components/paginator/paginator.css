@@ -1,0 +1,15 @@
+.mat-mdc-paginator {
+    border-radius: 0 !important;
+    ::ng-deep .mat-mdc-paginator-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    ::ng-deep .mdc-icon-button {
+       border-radius: 0;
+    }
+   
+    ::ng-deep .mdc-icon-button .mat-mdc-button-persistent-ripple {
+       border-radius: 4px;
+    }
+}
