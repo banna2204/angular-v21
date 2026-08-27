@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-paginator',
   imports: [MatPaginatorModule],
   templateUrl: './paginator.html',
-  styleUrl: './paginator.css',
+  styleUrl: './paginator.scss',
 })
-export class Paginator {}
+export class Paginator {
+  onPageChange(event : PageEvent){
+    console.log(event)
+  }
+}
