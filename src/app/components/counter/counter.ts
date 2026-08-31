@@ -1,8 +1,10 @@
 import { Component, input } from '@angular/core';
+import { AppCard } from '../app-card/app-card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-counter',
-  imports: [],
+  imports: [AppCard,MatIconModule],
   templateUrl: './counter.html',
   styleUrl: './counter.css',
 })

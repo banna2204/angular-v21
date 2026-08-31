@@ -15,8 +15,8 @@ export const appConfig: ApplicationConfig = {
   },
   {
     provide: MAT_SORT_DEFAULT_OPTIONS,
-    useValue : {
-      arrowPosition : 'before'
+    useValue: {
+      arrowPosition: 'before'
     }
   }
   ],

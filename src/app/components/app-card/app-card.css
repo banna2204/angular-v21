@@ -1,0 +1,14 @@
+.example-card {
+  max-width: 400px;
+  min-height: 300px;
+}
+/* 
+mat-icon{
+  width: 20px;
+  height: 20px;
+} */
+
+mat-card-title{
+  display: flex;
+  gap: 5px;
+}
