@@ -36,3 +36,107 @@ body {
   margin: 0;
   height: 100%;
 }
+
+$fontSizing : (
+  10: 10px,
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  24: 24px,
+  30: 30px,
+);
+
+@each $key, $value in $fontSizing {
+  .f-s-#{$key} {
+    font-size: $value;
+  }
+}
+
+$spacing: (
+  0: 0,
+  1: 2px,
+  2: 4px,
+  3: 6px,
+  4: 8px,
+  5: 10px,
+  6: 12px,
+  7: 14px,
+  8: 16px,
+  9: 18px,
+  10: 20px,
+  11: 24px,
+  12: 28px,
+  13: 32px,
+  14: 36px,
+  15: 40px,
+);
+
+@each $key, $value in $spacing {
+
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .gap-#{$key} {
+    gap: $value;
+  }
+}

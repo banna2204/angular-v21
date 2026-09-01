@@ -77,12 +77,12 @@
 <div (click)="decreaseCounterValue()">{{decreaseValue()}}</div>
 <div (click)="toggleCounterValue()">{{toggle()}}</div> -->
 
-<app-counter [increaseValue]="increaseValue()" [decreaseValue]="decreaseValue()" [toggle]="toggle()">
-</app-counter>
+<!-- <app-counter [increaseValue]="increaseValue()" [decreaseValue]="decreaseValue()" [toggle]="toggle()">
+</app-counter> -->
 
 <!-- <app-material-sort-table></app-material-sort-table>
 <app-paginator></app-paginator> -->
-
+<!-- 
 <app-app-card icon="fact_check">
   <div class="title">From App component</div>
   <p class="content">
@@ -91,4 +91,6 @@
     bred for hunting.
   </p>
   <button>app button</button>
-</app-app-card>
+</app-app-card> -->
+
+<router-outlet></router-outlet>

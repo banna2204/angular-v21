@@ -5,3 +5,27 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.flex{
+    display: flex;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.f-w-700{
+    font-weight: 700;
+}
