@@ -1,0 +1,76 @@
+nav{
+    height: 90px;
+    margin-left: 200px;
+
+    .logo{
+        color: #252B42;
+    }
+    
+    ul{
+        list-style: none;
+        margin-right: 170px;
+    }
+
+    .login-button{
+        color: #96BB7C;
+        border: none;
+        background: transparent;
+    }
+
+    .join-button{
+        background-color: #96BB7C;
+        color: #FFFFFF;
+        border-radius: 5px;
+        border: none;
+
+        mat-icon{
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+    }
+}
+
+main{
+
+    .main-content{
+        margin-left: 100px;
+        width: 50%;
+    }
+
+    .header-text{
+        color: #96BB7C;
+    }
+
+    .title{
+        font-size: 58px;
+        line-height: 80px;
+        color: #252B42;
+    }
+
+    .description{
+        color: #737373;
+        width: 390px;
+        line-height: 30px;
+    }
+
+    .content-quote-button{
+        background-color: #96BB7C;
+        color: #FFFFFF;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .learn-more-button{
+        background-color: #FFFFFF;
+        color: #96BB7C;
+        border-radius: 5px;
+        border: 1px solid #96BB7C;
+    }
+
+    .image-container{
+        width: 704px;
+        height: 680px;
+    }
+
+}

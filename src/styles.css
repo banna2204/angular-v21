@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-around{
+    justify-content: space-around;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.f-w-700{
+    font-weight: 700;
+}

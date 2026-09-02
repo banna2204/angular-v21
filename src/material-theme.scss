@@ -1,0 +1,142 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
+
+$fontSizing : (
+  10: 10px,
+  12: 12px,
+  14: 14px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  24: 24px,
+  30: 30px,
+);
+
+@each $key, $value in $fontSizing {
+  .f-s-#{$key} {
+    font-size: $value;
+  }
+}
+
+$spacing: (
+  0: 0,
+  1: 2px,
+  2: 4px,
+  3: 6px,
+  4: 8px,
+  5: 10px,
+  6: 12px,
+  7: 14px,
+  8: 16px,
+  9: 18px,
+  10: 20px,
+  11: 24px,
+  12: 28px,
+  13: 32px,
+  14: 36px,
+  15: 40px,
+);
+
+@each $key, $value in $spacing {
+
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .gap-#{$key} {
+    gap: $value;
+  }
+}
