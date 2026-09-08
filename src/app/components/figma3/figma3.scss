@@ -1,0 +1,58 @@
+.header {
+    margin-top: 40px;
+    .title {
+        color: #96BB7C;
+    }
+
+    h2 {
+        font-size: 40px;
+        color: #252B42;
+        line-height: 48px;
+    }
+
+    .description {
+        color: #737373;
+        width: 470px;
+        line-height: 20px;
+    }
+}
+
+.example-card {
+    max-width: 238px;
+    margin-top: 112px;
+
+    .card-title{
+        color: #252B42;
+    }
+
+    .card-content{
+        color: #737373;
+    }
+
+    .pending-line{
+        height: 2px;
+        width: 50px;
+        background-color: #E74040;
+    }
+}
+
+.example-header-image {
+    border: 1px solid gray;
+    background-image: url('https://mterial.angular.dev/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    width: 72px;
+    margin: 0;
+    height: 72px;
+}
+
+.card-container :nth-child(3) * {
+    color: white;
+}
+
+.card-container :nth-child(3) {
+    background-color: #96BB7C;
+
+    .pending-line{
+        background-color: #fff;
+     }
+}

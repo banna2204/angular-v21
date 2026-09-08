@@ -1,6 +1,5 @@
 nav{
     height: 90px;
-    margin-left: 200px;
 
     .logo{
         color: #252B42;
@@ -9,6 +8,11 @@ nav{
     ul{
         list-style: none;
         margin-right: 170px;
+
+        mat-icon{
+            width: 20px;
+            height: 20px;
+        }
     }
 
     .login-button{

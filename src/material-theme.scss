@@ -46,6 +46,10 @@ $fontSizing : (
   20: 20px,
   24: 24px,
   30: 30px,
+  36: 36px,
+  40: 40px,
+  48: 48px,
+  60: 60px,
 );
 
 @each $key, $value in $fontSizing {
