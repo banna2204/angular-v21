@@ -1,0 +1,50 @@
+<div class="header mt-15 flex flex-col item-center justify-center gap-12">
+    <h1 class="title m-0 f-s-48 flex flex-col item-center"><span>Stay in the Loop:</span> Subscribe to Our Newsletter</h1>
+    <p class="m-0 f-s-16 text-center">Join our community of travelers and never miss out on exclusive deals, travel tips, and insider insights. Subscribe to our newsletter today!</p>
+    <div class="search-input flex">
+        <mat-form-field class="mat-form-field">
+            <input matInput placeholder="Simple placeholder" required />
+        </mat-form-field>
+        <div class="button">
+            <button matButton="filled">Subscribe Now!</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="flex justify-around">
+        <div class="logo-section flex flex-col gap-6">
+            <img width="108" height="92" src="/LOGO.png" alt="logo">
+            <div class="f-s-40 f-w-700">NorthSide</div>
+            <p class="mt-13 mb-0 f-s-16">Experience personalized medical care from the comfort of your home.</p>
+        </div>
+        
+        <div class="grid-content flex flex-col gap-10 f-s-16">
+            @for(data of footerData.support; track data){
+                <div>{{data}}</div>
+            }
+        </div>
+
+        <div class="grid-content flex flex-col gap-10 f-s-16">
+            @for(data of footerData.service; track data){
+                <div>{{data}}</div>
+            }
+        </div>
+
+        <div class="grid-content flex flex-col gap-10 f-s-16">
+            @for(data of footerData.legal; track data){
+                <div>{{data}}</div>
+            }
+        </div>
+    </div>
+    <div class="footer-underline"></div>
+    <div class="footer-bottom flex justify-around">
+        <div class="flex gap-5">
+            <mat-icon>facebook</mat-icon>
+            <mat-icon>facebook</mat-icon>
+            <mat-icon>facebook</mat-icon>
+            <mat-icon>facebook</mat-icon>
+        </div>
+        <p class="m-0 f-s-16">HealNet 2024 © All Rights Reserved</p>
+    </div>
+</div>

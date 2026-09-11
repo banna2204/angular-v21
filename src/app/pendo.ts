@@ -30,4 +30,13 @@ export class PendoService {
       console.warn('Pendo not initialized yet. Event skipped:', eventName);
     }
   }
+
+  trackNameEvent(colName: string, data : any){
+    if(this.isInitialized){
+      (window as any).pendo?.track(colName,data);
+      console.log('track name',colName,data);
+    } else{
+      console.log('Pendo not initialized yet. Event skipped:',colName);
+    }
+  }
 }

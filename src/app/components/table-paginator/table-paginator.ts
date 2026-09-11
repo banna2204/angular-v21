@@ -29,6 +29,17 @@ export class TablePaginator implements AfterViewInit {
       pageSize: event.pageSize,           
     });
   }
+
+
+
+  onClick(colName: string, ele: PeriodicElement): void {
+    this.pendoService.trackNameEvent(colName,{
+      name: ele.name,
+      No: ele.position,
+      weight: ele.weight,
+      symbol: ele.symbol
+    });
+  }
 }
 
 export interface PeriodicElement {

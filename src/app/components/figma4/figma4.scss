@@ -1,0 +1,130 @@
+.header{
+    margin-top: 100px;
+    .title{
+        color: #1C1C1C;
+        line-height: 54px;
+    }
+
+    p{
+        color: #5D5D5D;
+        line-height: 24px;
+        width: 60%;
+    }
+}
+
+::ng-deep .mat-form-field{
+    width: 625px;
+    background-color: #F6F6F6;
+    height: 64px;
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+        background: #F6F6F6;
+    } 
+
+    .mat-mdc-form-field-subscript-wrapper{
+        display: none;
+    }
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before{
+        border-bottom-width: 0px;
+    }
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+        border-bottom-width: 0px;
+    }
+
+    .mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-focus-overlay{
+        opacity: 0;
+    }
+
+    .mat-mdc-form-field-infix {
+        width: 100%;
+    }
+}
+
+.button {
+    position: relative;
+    left: -10px;
+
+    button{
+        background-color: #FEEA39;
+        color: #724511;
+        padding: 32px;
+        font-size: 20px;
+    }
+
+    .mat-mdc-unelevated-button{
+        border-radius: 12px;
+    }
+}
+
+.footer{
+    background-color: #FEFDE8;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 40px;
+    margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    .logo-section{
+        width: 22%;
+        div{
+            color: #FBDA14;
+            font-family: 'Clash Display';
+            line-height: 100%;
+        }
+
+        p{
+            color: #5D5D5D;
+        }
+    }
+
+    .grid-content{
+        color: #888888;
+        line-height: 24px;
+    }
+
+    .grid-content > :first-child{
+        color: #3D3D3D;
+        font-weight: 700;
+    }
+
+    .footer-underline{
+        width: 88%;
+        background-color: #FFF889;
+        height: 1px;
+        margin: 50px auto 28px;
+    }
+
+    .footer-bottom{
+        gap: 50%;
+        mat-icon{
+            color: #888888;
+            height: 26px;
+            width: 26px;
+            font-size: 26px;
+        }
+
+        p{
+            color: #888888;
+            line-height: 24px;
+        }
+    }
+
+}
+
+@media (max-width:1100px){
+    .search-input{
+        display: none;
+    }
+
+    .footer{
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .footer > :first-child{
+        justify-content: space-around;
+    }
+}

@@ -24,6 +24,11 @@
         &.mat-button-toggle-checked {
             background-color:transparent;
         }
+
+        &.mat-button-toggle-label-content{
+            padding: 0;
+            line-height: 25px;
+        }
     }
 }
 
