@@ -1,0 +1,28 @@
+<div class="hero-section flex flex-col gap-15">
+    <h1 class="m-0 f-w-700 f-s-60">Discover the country’s Northern Wonderland!</h1>
+    <p class="m-0">Uncover a World of Serenity and Adventure in Pakistan's Northern Oasis with NorthSide Travel & Tourism - Where Majestic Mountains Meet Tranquil Valleys. Start your expedition with just a click!</p>
+    <div class="flex gap-8">
+        <app-custom-button bgColor="#FEEA39" color="#724511" text="Get Started" size="18px"></app-custom-button>
+        <app-custom-button bgColor="#FEFCC3" color="#EBC107" text="Learn More" size="18px"></app-custom-button>
+    </div>
+
+    <div class="flex flex-col mt-10">
+        <div class="footer-navigation flex gap-6 px-13 py-11">
+            @for(data of entertainmentNavigation; track data){
+                <div class="data flex gap-1 px-10 py-2 f-s-16 item-center">{{data.title}}
+                    <mat-icon class="f-s-16">{{data.icon}}</mat-icon>
+                </div>
+            }
+        </div>
+        <div class="footer-bottom flex gap-17 px-13 py-11">
+            @for(data of footerData; track data){
+                <div class="flex flex-col gap-4">
+                    <div class="footer-bottom-data flex gap-1 f-s-20 item-center">{{data.title}}
+                        <mat-icon class="f-s-20">keyboard_arrow_down</mat-icon>
+                    </div>
+                    <app-custom-button bgColor="#F6F6F6" color="#B0B0B0" text="{{data.buttonText}}" size="14px"></app-custom-button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

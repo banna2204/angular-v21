@@ -75,6 +75,11 @@ $spacing: (
   13: 32px,
   14: 36px,
   15: 40px,
+  16: 44px,
+  17: 48px,
+  18: 52px,
+  19: 56px,
+  20: 60px
 );
 
 @each $key, $value in $spacing {
