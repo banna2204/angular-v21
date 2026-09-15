@@ -1,0 +1,31 @@
+::ng-deep mat-paginator.mat-mdc-paginator {
+    border-radius: 0 !important;
+
+    .mat-mdc-paginator-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .mdc-icon-button {
+        border-radius: 0;
+    }
+
+    .mdc-icon-button .mat-mdc-button-persistent-ripple {
+        border-radius: 4px;
+    }
+
+    .mat-mdc-select-arrow {
+        display: none;
+    }
+
+    // .mdc-notched-outline {
+    //     width: 60%;
+    // }
+
+    .mat-mdc-paginator-page-size-select{
+        width: 50px;
+    }
+
+    .mat-mdc-paginator-range-label {
+        margin: 0;
+    }
+}
