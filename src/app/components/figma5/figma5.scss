@@ -2,71 +2,81 @@
     background-image: url('../../../../public/Hero.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 770px;
-    width: 1170px;
-    border-radius: 40px;
-    color: white;
-    padding: 100px 70px;
+    height: 84.5vh;
+    width: 87vw;
+    color: var(--color-white);;
     box-sizing: border-box;
+    position: relative;
+    padding-top: 14vh;
 
     h1{
+        width: 55vw;
         font-family: 'Clash Display';
-        font-style: Semibold;
-        line-height: 68px;
-        width: 70%;
     }
 
     p{
-        width: 42%;
+        width: 41vw;
     }
 
-    .button > button{
-        background-color: #FEEA39;
-        color: #724511;
-        border-radius: 12px;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 14px 32px;
-    }
+    .footer {
+        position: absolute;
+        bottom: -100px;
+        left: 70px;
 
-    .footer-navigation{
-        background-color: #fff;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        width:min-content;
-
-        .data{
-            border-radius: 8px;
-            color: #EBC107;
-            background-color: #FEFCC3;
+        .footer-navigation{
+            background-color: var(--color-white);
+            width:min-content;
     
-            mat-icon{
-                height: 16px;
-                width: 16px;
-            }
-    
-            &:first-child{
-                color: #724511;
-                background-color: #FEEA39;
-            }
-        }
-    }
-
-    .footer-bottom{
-        background-color: #fff;
-        border-bottom-right-radius: 16px;
-        border-bottom-left-radius: 16px;
-        border-top-right-radius: 16px;
-        // width:min-content;
+            .data{
+                color: var(--color-yellow-dark);
+                background-color: var(--color-yellow-light);
         
-        .footer-bottom-data{
-            color: #724511;
-
-            mat-icon{
-                height: 20px;
-                width: 20px;
+                mat-icon{
+                    height: 16px;
+                    width: 16px;
+                }
+        
+                &:first-child{
+                    color: var(--color-primary-red-dark);
+                    background-color: var(--color-yellow);
+                }
+            }
+        }
+    
+        .footer-bottom{
+            background-color: var(--color-white);;
+            border-top-right-radius: 16px;
+            width:min-content;
+            max-width: 69vw;
+            overflow-x: auto;
+            
+            .footer-bottom-data{
+                color: var(--color-primary-red-dark);
+    
+                mat-icon{
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+    
+            .search-section{
+                color: var(--color-primary-red-dark);
+                background-color: var(--color-yellow);
+                height: fit-content;
+                align-self: flex-end;
+    
+                mat-icon{
+                    height: 18px;
+                    width: 18px;
+                }
             }
         }
     }
+}
 
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
 }

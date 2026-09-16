@@ -50,6 +50,7 @@ $fontSizing : (
   40: 40px,
   48: 48px,
   60: 60px,
+  64: 64px
 );
 
 @each $key, $value in $fontSizing {
@@ -79,7 +80,42 @@ $spacing: (
   17: 48px,
   18: 52px,
   19: 56px,
-  20: 60px
+  20: 60px,
+  21: 64px,
+  22: 68px,
+  23: 72px,
+  24: 76px,
+  25: 80px,
+  26: 84px,
+  27: 88px,
+  28: 92px,
+  29: 96px,
+  30: 100px,
+  31: 104px,
+  32: 108px,
+  33: 112px,
+  34: 116px,
+  35: 120px,
+  36: 124px,
+  37: 128px,
+  38: 132px,
+  39: 136px,
+  40: 140px,
+  41: 144px,
+  42: 148px,
+  43: 152px,
+  44: 156px,
+  45: 160px,
+  46: 164px,
+  47: 168px,
+  48: 172px,
+  49: 176px,
+  50: 180px,
+  51: 184px,
+  52: 188px,
+  53: 192px,
+  54: 196px,
+  55: 200px,
 );
 
 @each $key, $value in $spacing {
@@ -148,4 +184,55 @@ $spacing: (
   .gap-#{$key} {
     gap: $value;
   }
+
+  .br-#{$key} {
+    border-radius: $value;
+  }
+
+  .bt-#{$key} {
+    border-radius: $value $value 0 0;
+  }
+
+  .bb-#{$key} {
+    border-radius: 0 0 $value $value;
+  }
+
+  .w-#{$key} {
+    width: $value;
+  }
+
+  .h-#{$key} {
+    height: $value;
+  }
+
+  .lh-#{$key} {
+    line-height: $value;
+  }
+}
+
+$weightSpacing : (
+  1: 100,
+  2: 200,
+  3: 300,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700
+);
+
+@each $key, $value in $weightSpacing {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+
+
+:root {
+  --color-yellow: #FEEA39;
+  --color-yellow-dark: #EBC107;
+  --color-yellow-light: #FEFCC3;
+
+  --color-white: #ffffff;
+
+  --color-primary-red-dark: #724511;
 }
