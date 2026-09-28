@@ -6,6 +6,8 @@ import { Figma3 } from './components/figma3/figma3';
 import { MatToggle } from './components/mat-toggle/mat-toggle';
 import { Figma4 } from './components/figma4/figma4';
 import { Figma5 } from './components/figma5/figma5';
+import { MaterialComponent } from './components/material-component/material-component';
+import { LandingPage } from './components/landing-page/landing-page';
 
 export const routes: Routes = [
     {path: '', component: App},
@@ -14,5 +16,7 @@ export const routes: Routes = [
     {path: 'figma3', component: Figma3},
     {path: 'figma4', component: Figma4},
     {path: 'figma5', component: Figma5},
-    {path: 'mat-toggle', component: MatToggle}
+    {path: 'mat-toggle', component: MatToggle},
+    {path: 'material-component', component: MaterialComponent},
+    {path: 'landing-page', component: LandingPage},
 ];

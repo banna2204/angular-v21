@@ -1,0 +1,33 @@
+header{
+    .header-title{
+        color: var(--color-primary-grey);
+    }
+
+    mat-icon{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.body{
+    .body-title{
+        color: var(--color-primary-grey);
+        width: 55%;
+    }
+
+    .body-sub-title{
+        color: var(--color-second-grey);
+    }
+
+    .card{
+        max-width: 300px;
+        .card-title{
+            color: var(--color-primary-grey);;
+        }
+
+        mat-icon{
+            height: 48px;
+            width: 48px;
+        }
+    }
+}

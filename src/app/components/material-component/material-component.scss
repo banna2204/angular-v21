@@ -1,0 +1,33 @@
+mat-card{
+    width: 500px;
+
+    &.mat-mdc-card{
+        border-radius: 5px;
+    }
+
+    mat-card-header{
+        padding: 0;
+
+        mat-icon{
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .mat-mdc-button{
+        color: black;
+
+        mat-icon{
+            margin: 0;
+        }
+    }
+
+    .header-action-btn{
+        border: 1px solid lightblue;
+        padding: 10px;
+    }
+    
+    mat-card-content{
+        padding: 0;
+    }
+}
