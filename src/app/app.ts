@@ -13,6 +13,8 @@ import { MaterialSortTable } from './components/material-sort-table/material-sor
 import { Paginator } from './components/paginator/paginator';
 import { AppCard } from './components/app-card/app-card';
 import { TablePaginator } from './components/table-paginator/table-paginator';
+import { Figma5 } from './components/figma5/figma5';
+import { Figma4 } from './components/figma4/figma4';
 
 interface Fruit {
   name: string;
@@ -43,7 +45,7 @@ const addressSchema = schema<User>((path)=>{
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule,MaterialSortTable,Paginator,AppCard,TablePaginator],
+  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule,MaterialSortTable,Paginator,AppCard,TablePaginator, Figma5, Figma4],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
