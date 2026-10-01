@@ -8,6 +8,7 @@ import { Figma4 } from './components/figma4/figma4';
 import { Figma5 } from './components/figma5/figma5';
 import { MaterialComponent } from './components/material-component/material-component';
 import { LandingPage } from './components/landing-page/landing-page';
+import { BorderAnimation } from './components/border-animation/border-animation';
 
 export const routes: Routes = [
     {path: '', component: App},
@@ -19,4 +20,6 @@ export const routes: Routes = [
     {path: 'mat-toggle', component: MatToggle},
     {path: 'material-component', component: MaterialComponent},
     {path: 'landing-page', component: LandingPage},
+    {path: 'animation', component: BorderAnimation}
 ];
+    

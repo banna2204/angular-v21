@@ -1,6 +1,11 @@
 ::ng-deep mat-button-toggle-group {
     margin-top: 20px;
     padding: 3px;
+    gap: 4px;
+    
+    .mat-button-toggle .mat-button-toggle-ripple{
+        border-radius: 99px;
+    }
 
     .mat-button-toggle-button{
         color: gray;
@@ -20,6 +25,9 @@
     
     .mat-button-toggle-appearance-standard{
         border-left: 0px;
+        &:hover{
+            border-radius: 99px;
+        }
          
         &.mat-button-toggle-checked {
             background-color:transparent;
