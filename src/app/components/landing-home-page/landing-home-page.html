@@ -1,0 +1,35 @@
+<div class="main">
+    <header class="flex item-center py-13 justify-around">
+        <div class="logo-section flex gap-4">
+            <img src="Icon.png" alt="logo" width="35" height="24">
+            <span class="fw-6 f-s-24">Nexcent</span>
+        </div>
+        <ul class="flex gap-17">
+            @for(list of header; track list){
+                <li class="f-s-16">{{list}}</li>
+            }
+        </ul>
+        <div class="flex">
+            <button class="login-btn py-5 px-10 f-s-14">Login</button>
+            <button class="signUp-btn py-5 px-10 f-s-14 br-3">Sign Up</button>
+        </div>
+    </header>
+    
+    <div class="body flex justify-center item-center py-29 px-41 gap-30">
+        <div class="left-section flex flex-col gap-13">
+            <div class="title f-s-64 fw-6 lh-24">Lessons and insights <span>from 8 years</span></div>
+            <p class="m-0">Where to grow your business as a photographer: site or social media?</p>
+            <button class="register-btn py-7 px-13 f-s-14 br-2">Register</button>
+        </div>
+    
+        <div class="right-section">
+            <img src="/Illustration.png" alt="image" width="390" height="400">
+        </div>
+    </div>
+    
+    <footer class="flex justify-center item-center gap-4 pb-10">
+        <mat-icon class="f-s-10">circle</mat-icon>
+        <mat-icon class="f-s-10">circle</mat-icon>
+        <mat-icon class="f-s-10">circle</mat-icon>
+    </footer>
+</div>

@@ -1,0 +1,23 @@
+<header class="flex flex-col mt-15 gap-4 justify-center item-center">
+    <div class="header-title lh-16 f-s-36 fw-6">Our Clients</div>
+    <p class="m-0 f-s-16">We have been working with some Fortune 500+ clients</p>
+    <div class="mt-4 flex gap-30">
+        @for(icon of headerIcons; track icon){
+            <mat-icon class="f-s-40">{{icon}}</mat-icon>
+        }
+    </div>
+</header>
+
+<div class="body flex flex-col mt-15 gap-4 justify-center item-center">
+    <div class="body-title text-center lh-16 f-s-36 fw-6">Manage your entire community in a single system</div>
+    <p class="body-sub-title lh-8 f-s-16 m-0">Who is Nextcent suitable for?</p>
+    <div class="px-41 flex space-between">
+        @for(data of membershipData; track data){
+            <div class="card flex flex-col gap-4 item-center p-11 text-center">
+                <mat-icon class="f-s-48">{{data.icon}}</mat-icon>
+                <div class="card-title f-s-28 lh-14">{{data.title}}</div>
+                <p class="m-0">{{data.description}}</p>
+            </div>
+        }
+    </div>
+</div>

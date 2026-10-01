@@ -1,0 +1,28 @@
+<div class="main mt-15 px-41 flex justify-center item-center gap-17">
+    <div>
+        <img src="/Frame 35.png" alt="frame-image" width="442" height="433">
+    </div>
+    <div class="spending-right-section flex flex-col gap-13">
+        <div class="spending-title f-s-36 lh-16 fw-6">The unseen of spending three years at Pixelgrade</div>
+        <p class="spending-subTitl m-0 f-s-14 lh-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
+        <button class="learn-more-btn py-7 px-13 f-s-14 br-2">Learn more</button>
+    </div>
+</div>
+
+<div class="bottom-section mt-15 px-41 py-21 flex justify-center item-center gap-23">
+    <div class="bottom-left-section flex flex-col gap-4">
+        <div class="bottom-heading f-s-36 lh-16 fw-6">Helping a local <span>business reinvent itself</span></div>
+        <p class="m-0 f-s-16 lh-11">We reached here with our hard work and dedication</p>
+    </div>
+    <div class="bottom-section-grid gap-15">
+        @for(spending of spendingData; track spending){
+            <div class="flex gap-8 item-center">
+                <mat-icon class="f-s-48">{{spending.icon}}</mat-icon>
+                <div class="flex flex-col">
+                    <div class="spending-count fw-7 f-s-24 lh-14">{{spending.count}}</div>
+                    <div class="spending-count-unit f-s-16 lh-11">{{spending.unit}}</div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

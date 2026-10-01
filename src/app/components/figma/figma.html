@@ -1,0 +1,33 @@
+<div class="header gap-4 flex flex-col">
+    <div class="header-title f-w-700">Practice Advice</div>
+    <h1 class="m-0 f-w-700 f-s-30">Our Experts Teacher</h1>
+    <p class="m-0">Problems trying to resolve the conflict between
+        the two major realms of Classical physics: Newtonian mechanics </p>
+</div>
+
+<div class="cards flex gap-10 mt-13">
+    @for(item of [].constructor(3); track $index) {
+    <div class="card py-12 px-15 flex gap-12 item-center justify-center flex-col">
+        @if($index == 1){
+            <div class="new py-11 px-8 flex item-center justify-center f-w-700">New</div>
+        }
+        <div class="heart-icon-container flex item-center justify-center"><mat-icon>favorite</mat-icon> </div>
+        <div class="f-s-24 m-0 f-w-700">FREE</div>
+        <p class="m-0">Organize across all apps by hand</p>
+        <div class="price-container flex gap-3 flex-col">
+            <span class="price f-s-24 m-0 f-w-700">19$</span>
+            <span class="price-text m-0 f-w-700">Per Month</span>
+        </div>
+        <p class="m-0">Slate helps you see how many more days you need...</p>
+        <button class="py-7 px-15">Try for free</button>
+        <div class="list-items flex gap-5 flex-col">
+            @for (item of listItems; track item) {
+            <div class="list-item f-w-700 flex gap-5 item-center">
+                <div class="check-icon-container flex item-center justify-center" [ngStyle]="{ 'background-color': item.bgColor }"><mat-icon>check</mat-icon> </div>
+                {{item.title}}
+            </div>
+            }
+        </div>
+    </div>
+    }
+</div>

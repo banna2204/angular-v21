@@ -1,0 +1,88 @@
+mat-card{
+    width: 500px;
+
+    &.mat-mdc-card{
+        border-radius: 5px;
+    }
+
+    mat-card-header{
+        padding: 0;
+
+        mat-icon{
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .mat-mdc-button{
+        color: black;
+
+        mat-icon{
+            margin: 0;
+        }
+    }
+
+    .header-action-btn{
+        border: 1px solid lightblue;
+        padding: 10px;
+    }
+    
+    mat-card-content{
+        padding: 0;
+    }
+}
+
+// checkbox
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+
+::ng-deep .mat-mdc-checkbox {
+    --mat-sys-hover-state-layer-opacity: 0;
+
+    .mat-internal-form-field > label {
+        padding: 0;
+        padding-top: 3px;
+    }
+
+    .mdc-checkbox__background{
+        border-radius: 20px;
+    }
+    
+    .mdc-checkbox {
+        padding: 9px;
+    }
+}
+
+
+// expansion panel
+.mat-accordion{
+    
+    .mat-expansion-panel-spacing {
+        margin: 0;
+
+        p{
+            margin: 0;
+        }
+    }
+
+    .mat-expansion-panel-header {
+        --mat-sys-hover-state-layer-opacity: 0;
+        font-size: 14px;
+    }
+
+
+    :hover {
+        background-color: lightblue;
+    }
+}
