@@ -1,6 +1,6 @@
 import { RouterOutlet } from '@angular/router';
 
-import { Component,ChangeDetectionStrategy,signal, computed,} from '@angular/core';
+import { Component,ChangeDetectionStrategy,signal, computed, inject,} from '@angular/core';
 import { applyEach, email, form, FormField, required, schema } from '@angular/forms/signals';
 import { CdkDrag,CdkDragDrop,CdkDropList,moveItemInArray,} from '@angular/cdk/drag-drop';
 import { Child } from './components/child/child';
@@ -15,6 +15,8 @@ import { AppCard } from './components/app-card/app-card';
 import { TablePaginator } from './components/table-paginator/table-paginator';
 import { Figma5 } from './components/figma5/figma5';
 import { Figma4 } from './components/figma4/figma4';
+import { MatDialog } from '@angular/material/dialog';
+import { Dialog } from './components/dialog/dialog';
 
 interface Fruit {
   name: string;
@@ -44,12 +46,13 @@ const addressSchema = schema<User>((path)=>{
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.scss',
   imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule,MaterialSortTable,Paginator,AppCard,TablePaginator, Figma5, Figma4],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class App {
+  readonly dialog = inject(MatDialog);
   name = signal('shubham');
   fruit = signal<Fruit>({
     name: 'apple',
@@ -127,5 +130,16 @@ export class App {
 
   toggleCounterValue(){
     this.toggle.set(!this.toggle())
+  }
+
+  openDialog() {
+    this.dialog.open(Dialog, {
+      data: { name: 'shubham' },
+      width: '400px',
+      height: '400px',
+      position: { top: '50px', left: '100px' },
+      hasBackdrop: false,
+      panelClass: 'custom-dialog-container',
+    });
   }
 }

@@ -6,6 +6,7 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CustomPaginatorIntl } from './custom-paginator';
 import { MAT_SORT_DEFAULT_OPTIONS } from '@angular/material/sort';
 import { PendoService } from './pendo';
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogConfig } from '@angular/material/dialog';
 
 export function initializePendoFactory(pendoService: PendoService) {
   return () => pendoService.initPendo();
@@ -25,10 +26,14 @@ export const appConfig: ApplicationConfig = {
     }
   },
   {
-      provide: APP_INITIALIZER,
-      useFactory: initializePendoFactory,
-      deps: [PendoService],
-      multi: true
-    }
+    provide: APP_INITIALIZER,
+    useFactory: initializePendoFactory,
+    deps: [PendoService],
+    multi: true
+  },
+  {   
+    provide: MAT_DIALOG_DEFAULT_OPTIONS,
+    useValue: {...new MatDialogConfig(), disableClose: true}
+  }
   ],
 };
