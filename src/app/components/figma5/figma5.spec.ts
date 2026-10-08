@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Figma5 } from './figma5';
 
 describe('Figma5', () => {

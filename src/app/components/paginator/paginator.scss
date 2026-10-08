@@ -5,6 +5,7 @@
         display: flex;
         justify-content: flex-start;
     }
+
     .mdc-icon-button {
         border-radius: 0;
     }
@@ -17,11 +18,7 @@
         display: none;
     }
 
-    // .mdc-notched-outline {
-    //     width: 60%;
-    // }
-
-    .mat-mdc-paginator-page-size-select{
+    .mat-mdc-paginator-page-size-select {
         width: 50px;
     }
 

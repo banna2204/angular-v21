@@ -12,16 +12,15 @@ import { BorderAnimation } from './components/border-animation/border-animation'
 import { AutoComplete } from './components/auto-complete/auto-complete';
 
 export const routes: Routes = [
-    {path: '', component: App},
-    {path: 'figma', component: Figma},
-    {path: 'figma2',component: Figma2},
-    {path: 'figma3', component: Figma3},
-    {path: 'figma4', component: Figma4},
-    {path: 'figma5', component: Figma5},
-    {path: 'mat-toggle', component: MatToggle},
-    {path: 'material-component', component: MaterialComponent},
-    {path: 'landing-page', component: LandingPage},
-    {path: 'animation', component: BorderAnimation},
-    {path: 'auto-complete', component: AutoComplete}
+    { path: '', component: App },
+    { path: 'figma', component: Figma },
+    { path: 'figma2', component: Figma2 },
+    { path: 'figma3', component: Figma3 },
+    { path: 'figma4', component: Figma4 },
+    { path: 'figma5', component: Figma5 },
+    { path: 'mat-toggle', component: MatToggle },
+    { path: 'material-component', component: MaterialComponent },
+    { path: 'landing-page', component: LandingPage },
+    { path: 'animation', component: BorderAnimation },
+    { path: 'auto-complete', component: AutoComplete }
 ];
-    

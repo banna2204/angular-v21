@@ -1,3 +1,4 @@
+// make this border-animation using conic-gradient and make it look like a snake moving around the border of the card
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -79,170 +80,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// .snake-btn {
-//   position: relative;
-//   display: inline-block;
-//   padding: 25px 50px;
-//   color: black;
-//   font-size: 24px;
-//   overflow: hidden;
-//   transition: 0.5s;
-//   margin: 250px;
-//   background: #ffffff;
-// }
-
-// .snake-btn:hover {
-//   background: #03e9f4;
-//   color: #0c002b;
-//   box-shadow: 0 0 5px #03e9f4,
-//               0 0 25px #03e9f4,
-//               0 0 50px #03e9f4,
-//               0 0 200px #03e9f4;
-// }
-
-// .snake-btn span {
-//   position: absolute;
-//   display: block;
-// }
-
-// .snake-btn span:nth-child(1) {
-//   top: 0;
-//   left: -100%;
-//   width: 100%;
-//   height: 2px;
-//   background: linear-gradient(90deg, transparent, #03e9f4);
-//   animation: animate1 3s linear infinite;
-// }
-
-// @keyframes animate1 {
-//   0% {
-//     left: -100%;
-//   }
-//   50%, 100% {
-//     left: 100%;
-//   }
-// }
-
-// .snake-btn span:nth-child(2) {
-//   top: -100%;
-//   right: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: linear-gradient(180deg, transparent, #03e9f4);
-//   animation: animate2 3s linear infinite;
-//   animation-delay: 0.8s;
-// }
-
-// @keyframes animate2 {
-//   0% {
-//     top: -100%;
-//   }
-//   50%, 100% {
-//     top: 100%;
-//   }
-// }
-
-// .snake-btn span:nth-child(3) {
-//   bottom: 0;
-//   right: -100%;
-//   width: 100%;
-//   height: 2px;
-//   background: linear-gradient(270deg, transparent, #03e9f4);
-//   animation: animate3 3s linear infinite;
-//   animation-delay: 1.5s;
-// }
-
-// @keyframes animate3 {
-//   0% {
-//     right: -100%;
-//   }
-//   50%, 100% {
-//     right: 100%;
-//   }
-// }
-
-// .snake-btn span:nth-child(4) {
-//   bottom: -100%;
-//   left: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: linear-gradient(360deg, transparent, #03e9f4);
-//   animation: animate4 3s linear infinite;
-//   animation-delay: 2.2s;
-// }
-
-// @keyframes animate4 {
-//   0% {
-//     bottom: -100%;
-//   }
-//   50%, 100% {
-//     bottom: 100%;
-//   }
-// }
-
-
-// .snake-card {
-//   margin: 220px 220px;
-//   position: relative;
-//   width: 300px;
-//   height: 150px;
-//   background-color: white;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: #fff;
-//   font-family: sans-serif;
-//   font-size: 24px;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-//   border-radius: 10px;
-//   overflow: hidden;
-// }
-
-// .snake-card::before {
-//   content: '';
-//   position: absolute;
-//   width: 150%;
-//   height: 150%;
-//   background: conic-gradient(
-//     transparent 70%, 
-//     #00fffc 90%, 
-//     #ff007f 100%
-//   );
-//   animation: rotateSnake 4s linear infinite;
-// }
-
-// .snake-card::after {
-//   content: '';
-//   position: absolute;
-//   background: #111;
-//   inset: 2px;
-//   border-radius: 8px;
-// }
-
-// .snake-card span {
-//   position: relative;
-//   z-index: 10;
-// }
-
-// @keyframes rotateSnake {
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
-
-
+// Try to make this animation using offset-path and offset-distance
 // .border-animation-container {
 //     position: relative;
 //     width: 200px;
@@ -254,16 +92,13 @@
 // .border-animation-container::before {
 //     content: '';
 //     position: absolute;
-
 //     width: 50px;
 //     height: 2px;
-
 //     background: linear-gradient(
 //         90deg,
 //         #00ff88
 //     );
 //     border-radius: 2px;
-
 //     offset-path: rect(0 100% 100% 0 round 15px);
 //     offset-distance: 0%;
 //     animation: move-border 3s linear infinite;
@@ -279,6 +114,7 @@
 //     }
 // }
 
+// Try to make this animation using take 4 child and give them different animation delay and make them move in a loop
 // .border-animation-container span:nth-child(1){
 // 	position: absolute;
 // 	top: 0;
@@ -289,6 +125,16 @@
 // 	animation: animate1 2s linear infinite;
 // }
 
+// @keyframes animate1 {
+// 	0%{
+// 		transform: translateX(-100%);
+// 	}
+
+// 	100%{
+// 		transform: translateX(100%);
+// 	}
+// }
+
 // .border-animation-container span:nth-child(2){
 // 	position: absolute;
 // 	top: 0;
@@ -297,7 +143,7 @@
 // 	height: 100%;
 // 	background: linear-gradient(to top, #0c002b, #1779ff);
 // 	animation: animate2 2s linear infinite;
-//     animation-delay: 1s;
+//  animation-delay: 1s;
 // }
 
 // @keyframes animate2{
@@ -318,7 +164,7 @@
 // 	height: 2px;
 // 	background: linear-gradient(to top, #0c002b, #1779ff);
 // 	animation: animate3 2s linear infinite;
-//     animation-delay: 2s;
+//  animation-delay: 2s;
 // }
 
 // @keyframes animate3{
@@ -339,7 +185,7 @@
 // 	height: 100%;
 // 	background: linear-gradient(to top, #0c002b, #1779ff);
 // 	animation: animate4 2s linear infinite;
-//     animation-delay: 3s;
+//  animation-delay: 3s;
 // }
 
 // @keyframes animate4{

@@ -10,5 +10,4 @@ import { LandingPrivacyPage } from '../landing-privacy-page/landing-privacy-page
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })
-export class LandingPage {
-}
+export class LandingPage {}

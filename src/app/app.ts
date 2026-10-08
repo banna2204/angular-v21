@@ -1,14 +1,13 @@
 import { RouterOutlet } from '@angular/router';
-
-import { Component,ChangeDetectionStrategy,signal, computed, inject,} from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, computed, inject, } from '@angular/core';
 import { applyEach, email, form, FormField, required, schema } from '@angular/forms/signals';
-import { CdkDrag,CdkDragDrop,CdkDropList,moveItemInArray,} from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray, } from '@angular/cdk/drag-drop';
 import { Child } from './components/child/child';
 import { Counter } from './components/counter/counter';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { MaterialSortTable } from './components/material-sort-table/material-sort-table';
 import { Paginator } from './components/paginator/paginator';
 import { AppCard } from './components/app-card/app-card';
@@ -27,7 +26,7 @@ interface User {
   name: string;
   email: string;
   password: string;
-  address:string[];
+  address: string[];
 }
 
 interface FormFields {
@@ -35,11 +34,11 @@ interface FormFields {
   label: string;
 }
 
-const addressSchema = schema<User>((path)=>{
-  required(path.email,{message:'Email is required!!'});
+const addressSchema = schema<User>((path) => {
+  required(path.email, { message: 'Email is required!!' });
 
-  applyEach(path.address, (addressPath)=>{
-    required(addressPath,{message:'Address field is required!!'})
+  applyEach(path.address, (addressPath) => {
+    required(addressPath, { message: 'Address field is required!!' })
   })
 })
 
@@ -47,7 +46,7 @@ const addressSchema = schema<User>((path)=>{
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList,Child,Counter,MatFormFieldModule,MatIconModule,MatInputModule,MatButtonModule,MaterialSortTable,Paginator,AppCard,TablePaginator, Figma5, Figma4],
+  imports: [RouterOutlet, FormField, CdkDrag, CdkDropList, Child, Counter, MatFormFieldModule, MatIconModule, MatInputModule, MatButtonModule, MaterialSortTable, Paginator, AppCard, TablePaginator, Figma5, Figma4],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
@@ -71,6 +70,7 @@ export class App {
     address: []
   });
 
+  // Firstly I use this for validation, but after that i used address array so I've changed and you can see new validation below that, 
   // userForm = form(this.userModel, (schema) => {
   //   required(schema.name, { message: 'Name is required!!' });
   //   required(schema.email, { message: 'Email is required!!' }),
@@ -102,6 +102,7 @@ export class App {
 
   onSubmit(event: Event) {
     event.preventDefault();
+    // practice with signal, set and update name.
     // this.name.set('banna');
     // this.name.update((name) => name.toUpperCase());
     // this.userModel.update((user) => ({
@@ -116,19 +117,19 @@ export class App {
     moveItemInArray(this.formFields, event.previousIndex, event.currentIndex);
   }
 
-  onTakeData(val:string){
+  onTakeData(val: string) {
     console.log(val)
   }
 
-  increaseCounterValue(){
+  increaseCounterValue() {
     this.increaseValue.update((count) => count + 1);
   }
 
-  decreaseCounterValue(){
+  decreaseCounterValue() {
     this.decreaseValue.update((count) => count - 1);
   }
 
-  toggleCounterValue(){
+  toggleCounterValue() {
     this.toggle.set(!this.toggle())
   }
 

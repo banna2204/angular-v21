@@ -9,7 +9,6 @@ import { Component, input, output } from '@angular/core';
 export class Child {
   username = input('');
   email = 'shubham2204@gmail.com'
-
   onSendEmit = output<string>();
 
   SendToParent(){

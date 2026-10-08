@@ -5,11 +5,11 @@ import { MatPaginatorIntl } from '@angular/material/paginator';
 export class CustomPaginatorIntl extends MatPaginatorIntl {
 
   override itemsPerPageLabel = 'Rows per page:';
+//   Try to change pagination label
 //   override nextPageLabel = 'Next page';
 //   override previousPageLabel = 'Previous page';
 //   override firstPageLabel = 'First page';
 //   override lastPageLabel = 'Last page';
-
 
   override getRangeLabel = (
     page: number,

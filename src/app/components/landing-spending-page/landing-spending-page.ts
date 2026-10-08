@@ -29,6 +29,5 @@ export class LandingSpendingPage {
       count: '1,926,436',
       unit: 'Payments'
     },
-    
   ]
 }

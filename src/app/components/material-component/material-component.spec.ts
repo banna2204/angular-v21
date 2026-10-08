@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MaterialComponent } from './material-component';
 
 describe('MaterialComponent', () => {

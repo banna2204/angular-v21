@@ -6,9 +6,7 @@ header{
 
 .mat-mdc-dialog-content{
     padding-top: 0px;
-    flex-grow:0;
-    // --mat-sys-body-medium-line-height: 0.5rem;
-    
+    flex-grow:0;    
 }
 
 ::ng-deep .mat-mdc-radio-group {
@@ -19,18 +17,11 @@ header{
     .mat-mdc-radio-button .mdc-radio {
         background: transparent;
         &:hover{
-            // background: ;
             border-radius: 10px;
         }
     }
 
     --mat-sys-primary: red;
     --mat-sys-on-surface: green;
-
-    // .mdc-radio:hover{
-    //     background: transparent; ;
-    //     border-radius: 10px;
-    // }
-
     --mat-sys-hover-state-layer-opacity: 0;
 }

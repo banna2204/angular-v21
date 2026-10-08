@@ -10,10 +10,10 @@ export class PendoService {
   async initPendo(): Promise<void> {
     try {
       await initialize({
-        publicAppId: 'd00363ea-4ba0-4bb0-80df-9dbe761c4b11', 
-        env: 'io', 
-        visitor: { id: 'LOCAL_ANON_USER' }, 
-        account: {}  
+        publicAppId: 'd00363ea-4ba0-4bb0-80df-9dbe761c4b11',
+        env: 'io',
+        visitor: { id: 'LOCAL_ANON_USER' },
+        account: {}
       });
       this.isInitialized = true;
       console.log('Pendo initialized anonymously.');
@@ -31,12 +31,12 @@ export class PendoService {
     }
   }
 
-  trackNameEvent(colName: string, data : any){
-    if(this.isInitialized){
-      (window as any).pendo?.track(colName,data);
-      console.log('track name',colName,data);
-    } else{
-      console.log('Pendo not initialized yet. Event skipped:',colName);
+  trackNameEvent(colName: string, data: any) {
+    if (this.isInitialized) {
+      (window as any).pendo?.track(colName, data);
+      console.log('track name', colName, data);
+    } else {
+      console.log('Pendo not initialized yet. Event skipped:', colName);
     }
   }
 }

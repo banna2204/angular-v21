@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LandingPrivacyPage } from './landing-privacy-page';
 
 describe('LandingPrivacyPage', () => {

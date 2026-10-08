@@ -9,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class LandingClientPage {
   headerIcons = ['toll','toll','toll','toll','toll','toll','toll'];
-
   membershipData = [
     {
       icon:'groups',

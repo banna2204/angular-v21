@@ -19,15 +19,15 @@
     max-width: 238px;
     margin-top: 112px;
 
-    .card-title{
+    .card-title {
         color: #252B42;
     }
 
-    .card-content{
+    .card-content {
         color: #737373;
     }
 
-    .pending-line{
+    .pending-line {
         height: 2px;
         width: 50px;
         background-color: #E74040;
@@ -50,7 +50,7 @@
 .card-container :nth-child(3) {
     background-color: #96BB7C;
 
-    .pending-line{
+    .pending-line {
         background-color: #fff;
-     }
+    }
 }

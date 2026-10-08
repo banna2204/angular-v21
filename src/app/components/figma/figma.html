@@ -9,7 +9,7 @@
     @for(item of [].constructor(3); track $index) {
     <div class="card py-12 px-15 flex gap-12 item-center justify-center flex-col">
         @if($index == 1){
-            <div class="new py-11 px-8 flex item-center justify-center f-w-700">New</div>
+        <div class="new py-11 px-8 flex item-center justify-center f-w-700">New</div>
         }
         <div class="heart-icon-container flex item-center justify-center"><mat-icon>favorite</mat-icon> </div>
         <div class="f-s-24 m-0 f-w-700">FREE</div>
@@ -23,7 +23,8 @@
         <div class="list-items flex gap-5 flex-col">
             @for (item of listItems; track item) {
             <div class="list-item f-w-700 flex gap-5 item-center">
-                <div class="check-icon-container flex item-center justify-center" [ngStyle]="{ 'background-color': item.bgColor }"><mat-icon>check</mat-icon> </div>
+                <div class="check-icon-container flex item-center justify-center"
+                    [ngStyle]="{ 'background-color': item.bgColor }"><mat-icon>check</mat-icon> </div>
                 {{item.title}}
             </div>
             }

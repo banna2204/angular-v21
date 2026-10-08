@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MaterialSortTable } from './material-sort-table';
 
 describe('MaterialSortTable', () => {

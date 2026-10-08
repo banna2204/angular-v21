@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LandingClientPage } from './landing-client-page';
 
 describe('LandingClientPage', () => {

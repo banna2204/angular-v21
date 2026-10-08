@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MatToggle } from './mat-toggle';
 
 describe('MatToggle', () => {

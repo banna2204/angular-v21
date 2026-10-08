@@ -5,7 +5,6 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AsyncPipe} from '@angular/common';
 
-
 @Component({
   selector: 'app-auto-complete',
   imports: [MatAutocompleteModule, FormsModule, ReactiveFormsModule, AsyncPipe],
