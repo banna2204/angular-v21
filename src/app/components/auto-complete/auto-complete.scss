@@ -1,0 +1,57 @@
+::ng-deep .example-form {
+    input {
+        border: none;
+        outline: none;
+        padding: 0.4rem;
+        background-color: #2e2b2b;
+        border-radius: 0.8rem;
+        box-sizing: border-box;
+        color: #ffffff;
+    }
+
+    input::placeholder {
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .mat-mdc-option {
+        min-height: 30px;
+        padding: 0 10px;
+
+        .mat-pseudo-checkbox-minimal {
+            display: none;
+        }
+
+        &:hover:not(.mdc-list-item--disabled) {
+            background-color: #d0d9f4;
+            color: #3E4759;
+
+        }
+
+        &:hover:not(.mdc-list-item--selected) {
+            background-color: #2e2b2b;
+            color: rgb(255, 255, 255, 0.8);
+
+        }
+    }
+
+    --mat-sys-surface-container : #2e2b2b;
+    --mat-sys-on-surface: white;
+    --mat-sys-body-large-size: 14px;
+
+    .cdk-overlay-pane {
+        border-radius: 0.8rem;
+        width: 185px;
+        box-sizing: border-box;
+    }
+
+    .mat-mdc-autocomplete-panel {
+        padding: 0;
+        border-radius: 0 0 0.8rem 0.8rem; 
+    }
+
+    input[aria-expanded="true"] {
+        box-sizing: border-box;
+        border-radius: 0.8rem 0.8rem 0 0;   
+    }
+}

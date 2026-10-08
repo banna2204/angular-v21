@@ -1,0 +1,8 @@
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5,8, 10, 25, 100]"
+              showFirstLastButtons     
+              (page)="onPageChange($event)">
+              <!-- [hidePageSize]="true" -->
+              <!-- currently I want to show to page size -->
+</mat-paginator>

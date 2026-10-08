@@ -1,0 +1,70 @@
+.main{
+    background-color: var(--color-primary-silver);
+}
+
+header{
+    .logo-section{
+        span{
+            color: #263238;
+        }
+    }
+    
+    ul{
+        list-style: none;
+    }
+
+    .login-btn{
+        color: var(--color-primary-green);
+        border: none;
+        background-color: transparent;
+    }
+
+    .signUp-btn{
+        color: var(--color-white);
+        background-color: var(--color-primary-green);
+        border: none;
+    }
+}
+
+.body{
+    .left-section{
+        .title{
+            color: var(--color-primary-grey);
+            max-width: 700px;
+            
+            span{
+                color: var(--color-primary-green);
+            }
+        }
+
+        .register-btn{
+            color: var(--color-white);
+            background-color: var(--color-primary-green);
+            border: none;
+            width: fit-content;
+        }
+    }
+}
+
+footer{
+    mat-icon{
+        height: 10px;
+        width: 10px;
+        color: var(--color-primary-green);
+    }
+
+    :not(:first-child){
+        opacity: 30%;
+    }
+}
+
+@media (max-width:1200px){
+    .body{
+        padding: 50px 80px;
+    }
+
+    .title{
+        font-size: 50px;
+       line-height: 60px !important;
+    }
+}

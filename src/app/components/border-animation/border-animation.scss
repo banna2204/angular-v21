@@ -1,0 +1,199 @@
+// make this border-animation using conic-gradient and make it look like a snake moving around the border of the card
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.snake-card {
+  position: relative;
+  color: black;
+  z-index: 1;
+}
+
+.snake-card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 20px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    #0077ff 100%
+  );
+  animation: spin 3s linear infinite;
+}
+
+.snake-card::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: white;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.dot-animation {
+  width: 2px;
+  height: 2px;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  animation: dot-animation 1s linear infinite;
+}
+
+.snake-card span:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.snake-card span:nth-child(3) {
+  animation-delay: 0.33s;
+}
+
+.snake-card span:nth-child(4) {
+  animation-delay: 0.66s;
+}
+
+
+@keyframes dot-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Try to make this animation using offset-path and offset-distance
+// .border-animation-container {
+//     position: relative;
+//     width: 200px;
+//     height: 100px;
+//     background: #fff;
+//     border-radius: 15px;
+// }
+
+// .border-animation-container::before {
+//     content: '';
+//     position: absolute;
+//     width: 50px;
+//     height: 2px;
+//     background: linear-gradient(
+//         90deg,
+//         #00ff88
+//     );
+//     border-radius: 2px;
+//     offset-path: rect(0 100% 100% 0 round 15px);
+//     offset-distance: 0%;
+//     animation: move-border 3s linear infinite;
+// }
+
+// @keyframes move-border {
+//     from {
+//         offset-distance: 0%;
+//     }
+
+//     to {
+//         offset-distance: 100%;
+//     }
+// }
+
+// Try to make this animation using take 4 child and give them different animation delay and make them move in a loop
+// .border-animation-container span:nth-child(1){
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 2px;
+// 	background: linear-gradient(to right, #0c002b, #1779ff);
+// 	animation: animate1 2s linear infinite;
+// }
+
+// @keyframes animate1 {
+// 	0%{
+// 		transform: translateX(-100%);
+// 	}
+
+// 	100%{
+// 		transform: translateX(100%);
+// 	}
+// }
+
+// .border-animation-container span:nth-child(2){
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	width: 2px;
+// 	height: 100%;
+// 	background: linear-gradient(to top, #0c002b, #1779ff);
+// 	animation: animate2 2s linear infinite;
+//  animation-delay: 1s;
+// }
+
+// @keyframes animate2{
+// 	0%{
+// 		transform: translatey(-100%);
+// 	}
+
+// 	100%{
+// 		transform: translatey(100%);
+// 	}
+// }
+
+// .border-animation-container span:nth-child(3){
+// 	position: absolute;
+// 	bottom: 0;
+// 	right: 0;
+// 	width: 100%;
+// 	height: 2px;
+// 	background: linear-gradient(to top, #0c002b, #1779ff);
+// 	animation: animate3 2s linear infinite;
+//  animation-delay: 2s;
+// }
+
+// @keyframes animate3{
+// 	0%{
+// 		transform: translateX(100%);
+// 	}
+
+// 	100%{
+// 		transform: translateX(-100%);
+// 	}
+// }
+
+// .border-animation-container span:nth-child(4){
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 2px;
+// 	height: 100%;
+// 	background: linear-gradient(to top, #0c002b, #1779ff);
+// 	animation: animate4 2s linear infinite;
+//  animation-delay: 3s;
+// }
+
+// @keyframes animate4{
+// 	0%{
+// 		transform: translatey(100%);
+// 	}
+
+// 	100%{
+// 		transform: translatey(-100%);
+// 	}
+// }

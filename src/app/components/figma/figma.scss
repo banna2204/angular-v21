@@ -1,0 +1,116 @@
+.header {
+    h1 {
+        color: #252B42;
+        line-height: 40px;
+    }
+
+    .header-title {
+        color: #96BB7C;
+        line-height: 24px;
+    }
+
+    p {
+        font-weight: 400;
+        color: #737373;
+        line-height: 20px;
+        width: 40%;
+    }
+}
+
+.cards {
+    .card {
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        .new {
+            position: absolute;
+            top: -33px;
+            right: -10px;
+            background-color: #E77C40;
+            border-radius: 50%;
+        }
+
+        .heart-icon-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #96BB7C;
+
+            mat-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 35px;
+                width: 35px;
+                color: #fff;
+            }
+        }
+
+        p {
+            color: #737373;
+            text-align: center;
+        }
+
+        p:first-of-type {
+            width: 140px;
+        }
+
+        p:nth-of-type(2) {
+            width: 175px;
+        }
+
+        .price-container {
+            text-align: center;
+
+            .price {
+                color: #96BB7C;
+            }
+
+            .price-text {
+                color: #8EC2F2;
+            }
+        }
+
+        button {
+            background-color: #96BB7C;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            width: 243px;
+            color: #fff;
+        }
+
+        .list-items {
+            .list-item {
+                color: #252B42;
+
+                .check-icon-container {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                }
+
+                mat-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    height: 12px;
+                    width: 12px;
+                }
+            }
+        }
+    }
+
+    .card:nth-child(even) {
+        background-color: #2D4059;
+    }
+
+    .card:nth-child(even) * {
+        color: #fff;
+
+        .list-item {
+            color: #fff;
+        }
+    }
+}

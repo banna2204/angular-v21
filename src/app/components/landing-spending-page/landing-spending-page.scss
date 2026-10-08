@@ -1,0 +1,69 @@
+.main{
+    .spending-right-section{
+        max-width: 700px;
+
+        .spending-title{
+            color: var(--color-primary-grey);
+        }
+
+        .spending-subTitl{
+            color: var(--color-second-grey);
+        }
+    
+        .learn-more-btn{
+            color: var(--color-white);
+            background-color: var(--color-primary-green);
+            border: none;
+            width: fit-content;
+        }
+    }
+}
+
+.bottom-section{ 
+    background-color: var(--color-primary-silver);
+    
+    .bottom-left-section{
+        max-width: 700px;
+
+        .bottom-heading{
+            color: var(--color-primary-grey);
+
+            span{
+                color: var(--color-primary-green);
+            }
+        }
+
+        p{
+            color: #18191F;
+        }
+    }
+
+    .bottom-section-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        mat-icon{
+            height: 48px;
+            width: 48px;
+            color: var(--color-primary-green);
+        }
+
+        .spending-count{
+            color: var(--color-primary-grey);
+        }
+
+        .spending-count-unit{
+            color: var(--color-second-grey);
+        }
+    }
+}
+
+@media (max-width:1200px){
+    .main{
+        padding: 50px 80px;
+    }
+
+    .bottom-section{
+        padding: 50px 80px;
+    }
+}
